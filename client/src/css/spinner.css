@@ -1,0 +1,61 @@
+@keyframes spinner {
+  to {transform: rotate(360deg);}
+}
+
+@-webkit-keyframes spinner {
+  to {-webkit-transform: rotate(360deg);}
+}
+
+.spinner {
+  min-width: 30px;
+  min-height: 30px;
+}
+
+.spinner:before {
+  content: 'Loading…';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -13px;
+  margin-left: -13px;
+}
+
+.spinner-sm:before {
+  width: 22px;
+  height: 22px
+}
+.spinner-md:before {
+  width: 35px;
+  height: 35px
+}
+.spinner-lg:before {
+  width: 50px;
+  height: 50px
+}
+
+.spinner-white:not(:required):before {
+  content: '';
+  border-radius: 50%;
+  border: 1.5px solid #ffffff;
+  border-top-color: #45454500;
+  animation: spinner .6s linear infinite;
+  -webkit-animation: spinner .6s linear infinite;
+}
+
+.spinner-black:not(:required):before {
+  content: '';
+  border-radius: 50%;
+  border: 1.5px solid #454545;
+  border-top-color: #45454500;
+  animation: spinner .6s linear infinite;
+  -webkit-animation: spinner .6s linear infinite;
+}
+
+/* New CSS */
+
+.spinner {
+  position: relative;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+}
